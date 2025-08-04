@@ -32,3 +32,17 @@ print(s)
 
 manejo de git
 git init
+git add .
+git commit -m "introduccion a pandas 5%"
+si sale error
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+crear archivo requirements.txt
+pip freeze > requirements.txt
+clonar repositorio
+como desactivar el entorno virtual
+>deactivate
+
+Para clonar se abre nuevo folder en escritorio y se pone
+git clone https://github.com/yoalvarezg/Curso_IA.git #link del codigo en github
