@@ -81,4 +81,7 @@ print(df_copy)
 #añadir una nueva columna creando un DataFrame nuevo
 df_mod=df_copy.assign(mascotas=[1,3,0,0])
 print(df_mod)
+#Eliminar una columna
+del df_mod["peso"]
+print(df_mod)
 
