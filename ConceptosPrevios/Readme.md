@@ -46,6 +46,7 @@ como desactivar el entorno virtual
 
 Para clonar se abre nuevo folder en escritorio y se pone
 git clone https://github.com/yoalvarezg/Curso_IA.git #link del codigo en github
+git del curso del profe https://github.com/lfernandogh75/IA_G296CAMPISTAS.git
 
 para recuperar las librerias de un proyecto
 pip install -r requirements.txt
