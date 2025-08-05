@@ -21,3 +21,17 @@ print(s)
 ## Creacion de un objeto Series inicializandolo con un escalar
 s=pd.Series(34,["test1","test2","test3"])
 print(s)
+
+# Acceso a los Elementos de un objeto Series
+# cada elemento de objeto series tiene un identificador unico
+s=pd.Series([2,4,6,8],index=["num1","num2","num3","num4"])
+print(s)
+
+# accediendo al tercer elemento objeto
+print(s["num3"])
+# acceder por la posicion
+print(s.iloc[2])
+print(s.loc["num3"])
+
+# acceder al segundo y tercer elemento por posicion
+print(s.iloc[2:4])
