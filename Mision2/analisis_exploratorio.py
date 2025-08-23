@@ -97,5 +97,24 @@ print('Ultimas 10 filas:',df.tail(10))
 #4. Pasajero 148 (n-1)
 print(f"El pasajero 148 es {df.loc[147]}")
 
+#Mostrar por pantalla las filas pares del dataframe
+print(df.iloc[range(0,df.shape[0],2)])
+
+#Mostrar los nombres de las personas que iban en primera clase ordenadas alfabeticamente
+print(df.loc[df['Pclass']==1]['Name'].sort_values())
+
+#Mostrar el % de personas que sobrevivieron y murieron
+print(df['Survived'].value_counts()/df['Survived'].count()*100)
+
+#Mostrar el % de personas que sobrevivieron en cada clase
+print(df.groupby('Pclass')['Survived'].value_counts(normalize=True)*100)
+
+#Mostrar la edad media de las mujeres que viajaban en cada clase
+print(df.groupby(['Pclass','Sex'])['Age'].mean().unstack()['female'])
 
 
+#Añadir un nueva columna boleana para ver si el pasajero era menor de edad o no
+df['es_menor']=df['Age']<18
+
+#Mostrar el % de menores y mayores de edad que sobrevivieron en cada clase
+print(df.groupby(['Pclass','es_menor'])['Survived'].value_counts(normalize=True)*100)
